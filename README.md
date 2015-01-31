@@ -78,7 +78,10 @@ android:text="New Button"
 ↓↓↓  
 android:text="@string/button01"  
 に変更します。  
+
+右側画面イメージのボタン表示も｢string.xml｣に設定した文字に変わりました。  
 これでＸＭＬの準備は終わりました。  
+
 
 ![08](https://github.com/miyake-yasunaga/02_Button/blob/master/images/08.png)
 
@@ -136,7 +139,7 @@ xmlに設定している｢さようなら｣を表示しているtext表示のi
 
         final TextView tv01 = (TextView)this.findViewById(R.id.textView);  
 
-あとはボタンクリックしたら、上で記述した変数tv01に  
+あとはonClick時に、上で記述した変数tv01に  
 ｢string.xml｣のmessage01に設定した文字をセットするという記述をすれば完成です。  
 
 
@@ -145,6 +148,12 @@ xmlに設定している｢さようなら｣を表示しているtext表示のi
                 tv01.setText(R.string.message01);　←この1行を追加  
 
             }  
+
+ボタンと同じように  
+         import android.widget.TextView;  
+も追加されました。  
+
+これでメニューの三角ボタンでビルドすると・・・
 
 ![12](https://github.com/miyake-yasunaga/02_Button/blob/master/images/12.png)
 
